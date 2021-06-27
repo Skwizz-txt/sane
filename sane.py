@@ -3,10 +3,10 @@ from discord.ext import commands
 import random
 import time
 
-token = "Nzk4MjgyNDM2ODQ0NTg0OTYw.X_ywdA.QNf-bBzDjRROVlLA1M7AlwEdjiE"
+token = "you wont get it"
 prefix = "s!"
 
-sane = commands.Bot(command_prefix=prefix,description="Sane The Cool Man")
+sane = commands.Bot(command_prefix=prefix,description="Sane by Skwizz")
 @sane.event
 async def on_ready():
     print("Sane Hop In :) ")
@@ -138,33 +138,10 @@ async def command3(ctx):
     await ctx.send(" ".join(message))
     embed = discord.Embed(title="**Commands Help**",description="Page 3")
     embed.set_thumbnail(url=bot_pfp)
-    embed.set_author(name="Sane",url=bot_pfp)
-    embed.add_field(name="**role_help**",value="Show help for the command roles",inline=False)
-    embed.add_field(name="**roles**",value="Allow you to pick some auto roles ( the owner must contact the dev ( Skwizz ) to set up this).",inline=False)
+    embed.set_author(name="Sane",url=bot_pfp
     embed.add_field(name="**Lottery**",value="Play the lottery and maybe win ?? :p",inline=False)
     embed.set_footer(text="This is the page 3 type s!command for page 1.")
     await ctx.send(embed = embed)
-@sane.command()
-async def role_help(ctx):
-    await ctx.send("Hello, use the command s!roles + the role u wante, here a list of roles for justdanii's chilling spot aviable :")
-    await ctx.send("YOUTUBER : s!roles ytb \n STREAMER : s!roles stm\n PROGRAMMER : s!roles prgm")
-@sane.command()
-async def roles(ctx,role):
-    if role == "ytb":
-        member = ctx.message.author
-        role = discord.utils.get(ctx.guild.roles, name='Youtuber')
-        await member.add_roles(role)
-        await ctx.send("Youtuber : Gave you the role !")
-    if role == "stm":
-        member = ctx.message.author
-        role = discord.utils.get(ctx.guild.roles, name='Streamer')
-        await member.add_roles(role)
-        await ctx.send("Streamer : Gave you the role !")
-    if role == "prgm":
-        member = ctx.message.author
-        role = discord.utils.get(ctx.guild.roles, name='Programierer')
-        await member.add_roles(role)
-        await ctx.send("Programmer : Gave you the role !")
 @sane.command()
 async def lottery(ctx):
     choices = ["You won a kiss !\n https://media.tenor.com/images/7bf94ea0f02bd107b531edc9e4006d85/tenor.gif ","You won a pat !\nhttps://thumbs.gfycat.com/BlankGiftedBurro-size_restricted.gif"
@@ -185,11 +162,6 @@ async def lottery(ctx):
         await ctx.send(choicewin)
     else:
         await ctx.send("No luck, you loosed...")
-@sane.command()
-async def pfp(ctx):
-    user = sane.getget_user("ID")
-    pfp = user.avatar_url
-    await ctx.send(pfp)
 
 
 
